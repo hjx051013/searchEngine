@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<meta name="ctx" th:content="${#httpServletRequest.getContextPath()}" />
+<head>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=yes">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="referrer" content="no-referrer">
+    <title>软院搜索</title>
+    <link rel="icon" type="image/png" th:href="@{/image/zju-logo.png}">
+    <link id="theme" th:href="@{/css/Main_bright.css}" rel="stylesheet" type="text/css">
+    <link id="theme_main" th:href="@{/css/Main.css}" rel="stylesheet" type="text/css">
+    <script th:src="@{/js/jquery-2.2.4.min.js}"></script>
+    <!--
+    <script type="text/javascript" src="/let_it_snow/snowstorm.js"></script>
+    -->
+    <script th:src="@{/js/index.js}"></script>
+
+</head>
+
+
+<body style="display:flex;align-items: center;">
+
+<div style="width:100%;">
+
+    <div id="main-form" class="mainform" style="display:flex;align-items: center;justify-content: center">
+        <form id="SearchForm" >
+
+            <div id="row-0-space-1"> </div>
+
+            <div id="row-1" class="row1">
+
+                <a id="row-1-link" href="http://www.cst.zju.edu.cn">
+                    <img alt="软院搜索" th:src="@{/image/logo.png}" title="">
+                </a>
+
+            </div>
+
+            <div id="row-1-space-2"> </div>
+
+            <div id="row-2" class="row2">
+                <input id="SearchWord" placeholder="搜索软院相关" type="text" maxlength="2048" autocomplete="off" class="invert" style="padding-right: -60px">
+            </div>
+
+
+            <div id="row-2-space-3"> </div>
+
+            <div id="row-3" class="row3">
+                <button id="SearchButton" type="submit" value="Search" class="button">Search</button>
+            </div>
+
+        </form>
+
+    </div>
+
+
+</div>
+
+
+</body></html>

@@ -1,0 +1,67 @@
+
+<!-- saved from url=(0069)http://47.99.52.94:8080/searchResults.htm?mainPage=%E4%B8%89%E4%B8%83 -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<meta name="ctx" th:content="${#httpServletRequest.getContextPath()}" />
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>软院搜索</title>
+    <link rel="icon" type="image/png" th:href="@{/image/zju-logo.png}">
+    <link type="text/css" rel="stylesheet" th:href="@{/css/search_result.css}">
+    <script type="text/javascript" th:src="@{/js/jquery-2.2.4.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/handle_search_result.js}"></script>
+</head>
+<body data-gr-c-s-loaded="true">
+<header>
+    <a th:href="@{/index}"><img class="header-logo" th:src="@{/image/text-logo.png}" alt="软院搜索"></a>
+    <input class="searchbar" type="text" id="search" placeholder="输入关键字搜索">
+    <div class="submit" id="searchButton">
+
+        <span>
+            <svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
+                </path>
+            </svg>
+        </span>
+    </div>
+</header>
+
+<div class="selectShow">
+    <div id="loading" th:attr="style=${data==null or data.isEmpty() ? 'display: block;' : 'display: none'}">资源为空！</div>
+    <div id="context" th:attr="style=${data!=null and !data.isEmpty() ? 'display: block' : 'display: none'}">
+        <div id="searchResult" class="search-results-container">
+            <ul th:each="resultItem: ${data}" th:class="'search-results-'+${resultItemStat.index+1}">
+                <!--<img style="cursor: pointer;height: 95px;width: 121px;position: absolute;top: 2px;left: 512px" src="./三七-TCM搜索_files/1837.jpg" href="/images/pictures/1837.jpg" alt="三七" onclick="window.open(&quot;/images/pictures/1837.jpg&quot;)">-->
+                <li class="main-link">
+                    <a style="cursor: pointer;" target="_blank" th:href="${resultItem.link}"><span th:utext="${resultItem.getTitle()}">三七</span></a>
+                </li>
+                <li class="second-link">
+                    <a style="cursor: pointer;" target="_blank" th:href="${resultItem.link}"><span th:utext="${resultItem.getLink()}">/detail/yaocai.htm</span></a>
+                </li>
+                <li class="description" th:utext="${resultItem.getDiscription()}">
+                    <span>田七、参三七、盘龙七、金不换、血参。多年生草本。根茎短，斜生；主根粗壮，肉质，倒圆锥形或圆柱形，常有疣状突起的分枝。茎直立，不分枝。掌状复叶，3～4片轮生于茎顶，小叶通常5～7，膜质，长椭圆倒卵形或长圆披针形，基部1对较小，先端长渐尖，基部近圆形，多不对称，叶缘有细密锯齿，齿端具小刚毛。伞形花序单独顶生，花小，多数两性，少杂性。花萼5齿裂；花瓣5，黄绿色，先端尖；雄蕊5枚，花丝线形；花柱上部分离为2。核果浆果状，近肾形，成熟时红色。花期6～8月，果期8～10月。　　　　
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<div class="paginate-container">
+    <div class="pagination" id="pageSetting">
+        <a class="pageSplit" id="first-page">首页</a>
+        <a class="pageSplit" id="last-page">上一页</a>
+        <a class="pageSplit pageSplitBorder" style="font-size: 16px" id="curPage">1</a>
+        <a class="pageSplit" id="next-page">下一页</a>
+    </div>
+</div>
+
+<footer>
+    <ul class="top-footer">
+        <li class="top-footer location"><span class="circle"></span>浙江大学软件学院</li>
+    </ul>
+</footer>
+
+</body></html>

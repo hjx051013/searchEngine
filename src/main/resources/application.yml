@@ -1,0 +1,32 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /searchEngine
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://47.100.50.2:3306/ruanjian1?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: 123
+    type: com.alibaba.druid.pool.DruidDataSource
+
+  thymeleaf:
+    cache: false
+    prefix: classpath:/template/
+    suffix: .html
+    encoding: UTF-8
+    mode: HTML
+
+  redis:
+    database: 0
+    port: 6379
+    password: 123
+    host: 47.100.50.2
+
+mybatis:
+  type-aliases-package: com.hjx.search_engine.entity
+  configuration:
+    map-underscore-to-camel-case: true
+logging:
+  config: classpath:logback-spring.xml

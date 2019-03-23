@@ -1,0 +1,61 @@
+body
+{
+
+   /* background-image: url('/image/background_bright.png'); */
+   background-repeat: repeat;
+   background-position: top left;
+   background-attachment: scroll;
+   background-color: #fff;
+   color: black;
+
+}
+
+
+/*  google like button
+.button
+{
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #f2f2f2;
+    border-radius: 2px;
+    height: 33px;
+    width: 120px;
+    border: 1px solid #f2f2f2;
+    color: #757575;
+}
+
+
+.button:hover
+{
+    border: 1px solid #c6c6c6;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    color: #202020;
+}
+*/
+
+
+/*  dark style button */
+.button
+{
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #202020;
+    border-radius: 2px;
+    height: 50px;
+    width: 120px;
+    border: 1px solid #101010;
+    color: #ffffff;
+    
+    /* predifine for mobile device */
+    background-position: -288px -128px;
+}
+
+
+.button:hover
+{
+    border: 1px solid #101010;
+    background-color: #303030;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    color: #ffffff;
+}
+

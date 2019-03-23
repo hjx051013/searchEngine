@@ -1,0 +1,224 @@
+
+
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+
+body
+{
+    margin:0px 0px 0px 0px;
+    font-family:Verdana, sans-serif, å®‹ä½“;
+    font-size:13px;
+    
+}
+
+
+
+div
+{
+    overflow:hidden;
+}
+
+input,select,textarea
+{
+    font-family:Microsoft YaHei;
+    font-size:15px;
+}
+
+
+
+
+
+.logo
+{
+    display: inline-block;
+    text-align: right;
+    margin-top: 30px;
+    margin-right: 40px;
+}
+
+
+
+
+.mainform
+{
+    max-width:800px;
+    width: 80%;
+    height: auto;
+    margin:15px auto;
+}
+
+.row1
+{
+    margin: 0px auto;
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+
+
+.row1 img
+{
+    width: 600px;
+    height: auto;
+    border-radius: 20px;
+
+}
+
+.row2
+{
+    width:100%;
+    height:50px;
+    text-align:center;
+    margin-top:20px;
+}
+
+
+.row3
+{
+    width: 100%;
+    height:50px;
+    text-align:center;
+    margin-top: 20px;
+}
+
+
+
+
+#row-0-space-1
+{
+    width: 1%;
+    display: inline-block;
+}
+
+
+#row-1-space-2
+{
+    width: 1%;
+    display: inline-block;
+}
+
+#row-2-space-3
+{
+    width: 1%;
+    display:  inline-block;
+}
+
+
+
+#SearchWord
+{
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    border: 1px solid #c8c8c8;
+    text-indent: 0.5em;
+}
+
+
+#SearchWord:hover
+{
+    border: 1px solid #b9b9b9;
+}
+
+
+#SearchButton 
+{
+	cursor: pointer;
+}
+
+
+
+
+.row1:hover #front-info
+{
+    visibility: visible;
+    opacity: 1;
+}
+
+
+
+/* for icons */
+
+.icon-title
+{
+    /* opacity:0.8; */
+    opacity: 1;
+}
+
+.icons-group
+{
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+
+
+@media screen and (max-width: 700px) {
+	
+	#SearchWord
+	{
+    	text-indent: 0em;
+	}
+    
+    #result-panel-left,
+    #result-panel-middle,
+    .result-panel-middle-show,
+    #filter-div
+    {
+        display:none;
+    }
+
+    
+    
+    .row2
+    {
+        margin-top: 30px;
+    }
+    
+    .row3
+    {
+        margin-top: 30px;
+    }
+    
+    
+    .row1_search
+    {
+        width: 60px;
+        height: 33px;
+    }
+    
+    .row1_search img
+    {
+        width: 60px;
+        height: 33px;
+        border-radius: 5px 5px;
+    }
+    
+    .row2_search
+    {
+        width: 60%;
+    }
+    
+    #row-1-space-2,
+    #row-2-space-3
+    {
+        width: 0%;
+    }
+    
+
+    
+}
+
+
+
+
+
+
+
+
