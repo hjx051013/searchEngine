@@ -6,9 +6,9 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://47.100.50.2:3306/ruanjian1?useUnicode=true&characterEncoding=utf-8
+    url: jdbc:mysql://localhost:3306/ruanjian1?useUnicode=true&characterEncoding=utf-8
     username: root
-    password: 123
+    password: xxx #自行配置
     type: com.alibaba.druid.pool.DruidDataSource
 
   thymeleaf:
@@ -21,8 +21,8 @@ spring:
   redis:
     database: 0
     port: 6379
-    password: 123
-    host: 47.100.50.2
+    password: xxx #自行配置
+    host: localhost
 
 mybatis:
   type-aliases-package: com.hjx.search_engine.entity
