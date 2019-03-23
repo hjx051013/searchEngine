@@ -28,7 +28,7 @@ class DB:
 
 # 爬虫数据存储的数据库参数
 DbParams = {
-    "ip": "127.0.0.1",
+    "ip": "xxx",
     "user":"root",
     "password": "xxx",
     "db_name": "ruanjian",

@@ -1,7 +1,7 @@
 #!/bin/bash
 if test $# = 1
 then
-	    mysql -u root -p -h $1 < ruanjian1.sql
+	    mysql -u root -p -h $1 < ruanjian.sql
         sleep 1
         echo "数据库建表完毕"
         version=$(python --version | grep '3')
