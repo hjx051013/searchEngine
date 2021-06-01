@@ -9,4 +9,4 @@ requests==2.21.0
 rwlock==0.0.7
 soupsieve==1.8
 threadpool==1.3.2
-urllib3==1.24.1
+urllib3==1.26.5
